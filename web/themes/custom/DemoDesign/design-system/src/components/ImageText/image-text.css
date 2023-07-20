@@ -1,0 +1,27 @@
+:host {
+  @apply block;
+}
+
+.image-text {
+  @apply grid md:grid-cols-2 gap-5;
+}
+
+.image-text ::slotted([slot="media"]) {
+  @apply w-full;
+}
+
+.image-text ::slotted(h5) {
+  @apply font-normal text-black;
+}
+
+:host([image-align="right"]) .image-text__media {
+  @apply order-last;
+}
+
+.image-text__media {
+  @apply order-last md:order-first;
+}
+
+.image-text__content {
+  @apply flex flex-col justify-center;
+}

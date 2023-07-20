@@ -1,0 +1,25 @@
+uuid: 93d0362b-7ba6-4890-9b93-2f9922236f69
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - DemoDesign
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: DemoDesign_site_branding
+theme: DemoDesign
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

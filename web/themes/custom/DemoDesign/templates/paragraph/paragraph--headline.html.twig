@@ -1,0 +1,12 @@
+{%
+  set headline_attributes = create_attribute({
+    'level': headline_type,
+    'align': headline_alignment
+  })
+%}
+
+<div class="container py-5 mb-10 px-3 mx-auto ">
+  <dc-headline pretext="{{ content.field_preheadline|field_value }}" level="{{ headline_attributes.level }}" align="{{ headline_attributes.align }}">
+    {{ content.field_text|render|striptags }}
+  </dc-headline>
+</div>

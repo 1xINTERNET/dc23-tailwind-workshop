@@ -1,0 +1,23 @@
+uuid: b4e3989b-24fa-414c-868a-f7fe42746b24
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - DemoDesign
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: DemoDesign_search_form_narrow
+theme: DemoDesign
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

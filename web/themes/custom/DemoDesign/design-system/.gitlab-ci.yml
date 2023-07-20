@@ -1,0 +1,50 @@
+image: node:erbium # active lts
+
+stages:
+  - dependencies
+  - build
+  - test
+  - deploy
+
+# default for jobs using the cache
+#
+# cache is read-only by default and will be rebuilt
+# when package-lock.json changes
+.cache:
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules/
+    policy: pull
+
+install dependencies:
+  extends: .cache
+  stage: dependencies
+  # Override cache policy to add node_modules to cache for future jobs
+  cache:
+    policy: pull-push
+  script:
+    - npm ci
+  only:
+    changes:
+      - package-lock.json
+
+build storybook:
+  extends: .cache
+  stage: build
+  script:
+    - npm run build:storybook
+  artifacts:
+    paths:
+      - storybook-static
+    expire_in: 24 hours
+
+linting:
+  extends: .cache
+  stage: test
+  script:
+    - npm run lint
+  only:
+    - merge_requests

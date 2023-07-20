@@ -1,0 +1,35 @@
+{# map image position #}
+{% set image_align = {
+  'image_left': false,
+  'image_right': 'right',
+} %}
+
+{%
+  set image_text_attributes = create_attribute({
+    'image-align': image_align[data_position]
+  })
+%}
+
+<div class="container py-5 mb-10 px-3 mx-auto ">
+  <dc-image-text {{ image_text_attributes }}>
+    <div slot="media">
+      {{ content.field_image|field_value }}
+    </div>
+
+    {% if content.field_title|field_value is not empty %}
+      <dc-headline pretext="{{ content.field_pretitle|field_value }}" level="h2">
+        {{ content.field_title|field_value }}
+      </dc-headline>
+    {% endif %}
+
+    <div class="text-default mt-5 mb-10">
+      {{ content.field_text|field_value }}
+    </div>
+
+    {% if content.field_link|field_value is not empty %}
+      <dc-button rounded onclick="window.open('{{ content.field_link.0['#url'] }}');">
+        {{ content.field_link.0['#title'] }}
+      </dc-button>
+    {% endif %}
+  </dc-image-text>
+</div>

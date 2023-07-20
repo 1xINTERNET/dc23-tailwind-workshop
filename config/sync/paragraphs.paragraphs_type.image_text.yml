@@ -1,0 +1,18 @@
+uuid: 12db7ee2-67ed-4e8f-846f-a6b99d7efcd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - triana
+id: image_text
+label: 'Image Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  paragraph_image_position:
+    enabled: true
+    default_image_position: image_left
+    options:
+      image_left: Left
+      image_right: Right

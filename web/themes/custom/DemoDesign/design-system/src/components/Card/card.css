@@ -1,0 +1,64 @@
+:host {
+  @apply block w-full h-full;
+}
+
+.card {
+  @apply p-10 relative w-full h-full flex flex-col bg-brand text-white gap-4;
+}
+
+.card__content {
+  @apply flex flex-col h-16;
+}
+
+.card__action {
+  @apply mt-4 absolute right-0 bottom-0;
+}
+
+.card__media {
+  @apply flex justify-center my-auto;
+}
+
+.card__title {
+  @apply w-10/12 mt-2 h-16 flex flex-col justify-end;
+}
+
+.card__wrapper {
+  @apply block rounded-full w-1/2 p-1;
+  background-image: linear-gradient(white, white),
+    radial-gradient(
+      circle at top left,
+      rgb(235, 170, 84) 10%,
+      rgb(219, 84, 84) 20%,
+      rgb(170, 90, 170) 30%,
+      rgb(208, 36, 65) 45%,
+      rgb(120, 120, 231) 60%,
+      rgb(232, 129, 235) 70%,
+      rgb(60, 107, 60) 80%,
+      rgb(134, 227, 134) 90%,
+      rgb(83, 212, 83) 100%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.card ::slotted([slot="media"]) {
+  @apply rounded-full object-cover aspect-square bg-brand p-2;
+}
+
+/* compact variant */
+
+:host([variant="compact"]) .card {
+  @apply py-20 bg-card text-black;
+}
+
+:host([variant="compact"][highlight]) .card {
+  @apply bg-secondary text-white;
+}
+
+:host([variant="compact"]) .card__content {
+  @apply text-center h-auto;
+}
+
+:host([variant="compact"]) .card__title {
+  @apply mb-4 text-6xl w-full h-auto;
+}

@@ -1,0 +1,19 @@
+uuid: 762ba21e-4ea1-42da-b362-dd39238e6486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_preheadline
+    - paragraphs.paragraphs_type.headline
+id: paragraph.headline.field_preheadline
+field_name: field_preheadline
+entity_type: paragraph
+bundle: headline
+label: Preheadline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

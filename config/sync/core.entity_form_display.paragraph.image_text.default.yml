@@ -1,0 +1,72 @@
+uuid: ae981789-45ab-4020-a856-9905dbb80d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text.field_image
+    - field.field.paragraph.image_text.field_link
+    - field.field.paragraph.image_text.field_pretitle
+    - field.field.paragraph.image_text.field_text
+    - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.field_view_mode
+    - paragraphs.paragraphs_type.image_text
+  module:
+    - link
+    - media_library
+    - media_library_edit
+    - text
+id: paragraph.image_text.default
+targetEntityType: paragraph
+bundle: image_text
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  field_link:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_pretitle:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view_mode:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,145 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "dc-button",
+      "path": "./src/components/Button/DcButton.js",
+      "attributes": [
+        {
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "onClick"
+        },
+        {
+          "name": "outline",
+          "type": "boolean"
+        },
+        {
+          "name": "slotDefault",
+          "type": "string"
+        },
+        {
+          "name": "link",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "color",
+          "attribute": "color",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "onClick",
+          "attribute": "onClick"
+        },
+        {
+          "name": "outline",
+          "attribute": "outline",
+          "type": "boolean"
+        },
+        {
+          "name": "slotDefault",
+          "attribute": "slotDefault",
+          "type": "string"
+        },
+        {
+          "name": "link",
+          "attribute": "link",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "dc-card",
+      "path": "./src/components/Card/DcCard.js",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "type": "string"
+        },
+        {
+          "name": "has-action",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "type": "string"
+        },
+        {
+          "name": "hasAction",
+          "attribute": "has-action",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "dc-headline",
+      "path": "./src/components/Headline/DcHeadline.js",
+      "attributes": [
+        {
+          "name": "level",
+          "type": "string"
+        },
+        {
+          "name": "pretext",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "level",
+          "attribute": "level",
+          "type": "string"
+        },
+        {
+          "name": "pretext",
+          "attribute": "pretext",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "dc-image-text",
+      "path": "./src/components/ImageText/DcImageText.js",
+      "attributes": [
+        {
+          "name": "image-align",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "imageAlign",
+          "attribute": "image-align",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

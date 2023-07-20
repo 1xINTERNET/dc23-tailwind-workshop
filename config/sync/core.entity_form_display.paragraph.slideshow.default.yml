@@ -1,0 +1,36 @@
+uuid: a88cd9ee-92a5-47f2-92bb-cffd3af1a21d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - paragraphs
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slide:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Section
+      title_plural: Sections
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: slide
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: eed8c213-cb3a-4a21-8d27-9c86c341ee85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pretext
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.field_pretext
+field_name: field_pretext
+entity_type: paragraph
+bundle: text
+label: Pretext
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

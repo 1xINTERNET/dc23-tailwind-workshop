@@ -1,0 +1,62 @@
+uuid: 3ed39028-8852-47c7-a108-bba8e8390b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_paragraphs
+    - node.type.page
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.headline
+    - paragraphs.paragraphs_type.image_text
+    - paragraphs.paragraphs_type.page_reference
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_paragraphs
+field_name: field_content_paragraphs
+entity_type: node
+bundle: page
+label: 'Content Paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      headline: headline
+      image_text: image_text
+      page_reference: page_reference
+      cards: cards
+      slideshow: slideshow
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      cards:
+        weight: 9
+        enabled: true
+      headline:
+        weight: 6
+        enabled: true
+      image:
+        weight: 11
+        enabled: false
+      image_text:
+        weight: 7
+        enabled: true
+      page_reference:
+        weight: 8
+        enabled: true
+      slide:
+        weight: 14
+        enabled: false
+      slideshow:
+        weight: 9
+        enabled: true
+      text:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

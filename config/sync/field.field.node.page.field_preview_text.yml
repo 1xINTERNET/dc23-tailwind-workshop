@@ -1,0 +1,21 @@
+uuid: 486ee4b3-d93a-461b-8b9e-7b78e07b4636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview_text
+    - node.type.page
+  module:
+    - text
+id: node.page.field_preview_text
+field_name: field_preview_text
+entity_type: node
+bundle: page
+label: 'Preview Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

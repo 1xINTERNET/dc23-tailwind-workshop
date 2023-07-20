@@ -1,0 +1,29 @@
+<div class="relative bg-brand-dark overflow-hidden">
+  <div class=" container px-3 mx-auto text-center p-10 sm:px-64 mb-10 z-0">
+    {% if content.field_pretext|field_value is not empty %}
+      <dc-headline light class="mb-8" level="h4">
+        {{ content.field_pretext|field_value }}
+      </dc-headline>
+    {% endif %}
+
+    {% if content.field_text|field_value is not empty %}
+      <div class="mb-8 text-white z-10">
+        {{ content.field_text|render|striptags }}
+      </div>
+    {% endif %}
+
+    {% if content.field_text_title|field_value is not empty %}
+      <dc-headline light class="mb-8" level="h2">
+        {{ content.field_text_title|field_value }}
+      </dc-headline>
+    {% endif %}
+
+    {% if content.field_text_link|field_value is not empty %}
+      <dc-button class="flex justify-center mt-" onclick="window.open('{{ content.field_text_link.0['#url'] }}');">
+        {{ content.field_text_link.0['#title'] }}
+      </dc-button>
+    {% endif %}
+
+  </div>
+  <img class="absolute hidden h-full md:block right-0 top-0 z-0" src="../themes/custom/DemoDesign/assets/castle.png" alt="{{ 'Home'|t }}"/>
+</div>

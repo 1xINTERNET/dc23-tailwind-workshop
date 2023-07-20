@@ -1,0 +1,60 @@
+:host {
+  @apply block w-full;
+}
+
+:host([align="left"]) {
+  @apply text-left;
+}
+:host([align="center"]),
+:host([align="center"]) .headline-pretext {
+  @apply text-center;
+}
+:host([align="right"]),
+:host([align="right"]) .headline-pretext {
+  @apply text-right;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-brand-text font-semibold;
+}
+:host([light]) h1,
+:host([light]) h2,
+:host([light]) h3,
+:host([light]) h4,
+:host([light]) h5,
+:host([light]) h6 {
+  @apply text-white;
+}
+
+h1 {
+  @apply text-6xl;
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+h4 {
+  @apply text-3xl;
+}
+
+h5 {
+  @apply text-base;
+}
+
+h6 {
+  @apply text-sm;
+}
+
+.headline-pretext {
+  @apply font-medium uppercase text-secondary mb-5;
+}

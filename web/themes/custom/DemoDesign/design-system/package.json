@@ -1,0 +1,100 @@
+{
+  "name": "@DesignDemo/design-system",
+  "version": "0.0.21",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run storybook",
+    "lint": "npx standard src/**/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 64560",
+    "build:dev": "webpack --mode development",
+    "build": "NODE_ENV=production webpack --mode production && npm run wca:json",
+    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
+    "prepack": "npm run build && mv dist/* .",
+    "wca": "wca analyze ./src/components/**/*.js",
+    "wca:md": "wca analyze ./src/components/**/*.js > ./custom-elements.md",
+    "wca:json": "wca analyze ./src/components/**/*.js --outFile ./custom-elements.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.4",
+    "css-loader": "^4.2.2",
+    "cssnano": "^4.1.10",
+    "husky": "^4.3.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.11.0",
+    "@storybook/addon-a11y": "6.1.0-alpha.27",
+    "@storybook/addon-actions": "6.1.0-alpha.27",
+    "@storybook/addon-controls": "6.1.0-alpha.27",
+    "@storybook/addon-docs": "6.1.0-alpha.27",
+    "@storybook/addon-knobs": "6.1.0-alpha.27",
+    "@storybook/addon-viewport": "6.1.0-alpha.27",
+    "@storybook/addons": "6.1.0-alpha.27",
+    "@storybook/client-api": "6.1.0-alpha.27",
+    "@storybook/core": "6.1.0-alpha.27",
+    "@storybook/web-components": "6.1.0-alpha.27",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "@whitespace/storybook-addon-html": "^4.2.0",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.9.0",
+    "glob": "^7.1.6",
+    "globals": "^13.2.0",
+    "hoverintent": "^2.2.1",
+    "import-glob": "^1.5.0",
+    "lint-staged": "^10.4.0",
+    "lit-element": "^2.4.0",
+    "mini-css-extract-plugin": "^0.11.0",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-properties": "^8.0.11",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^8.0.0",
+    "react-is": "^16.13.1",
+    "regenerator-runtime": "^0.13.7",
+    "sanitize-html": "^2.0.0",
+    "slim-select": "^1.27.0",
+    "standard": "^15.0.0",
+    "storybook-addon-themes": "^6.0.1",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "tailwindcss": "^3.1.8",
+    "terser-webpack-plugin": "^4.1.0",
+    "web-component-analyzer": "^1.1.6",
+    "webpack-cli": "^3.3.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 11"
+  ],
+  "standard": {
+    "globals": [
+      "customElements",
+      "CustomEvent"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix"
+    ]
+  },
+  "storybook": {
+    "title": "Design System",
+    "url": ""
+  }
+}

@@ -1,0 +1,22 @@
+uuid: 2a2a858e-7404-4468-b3c1-eed35703212e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - DemoDesign
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: DemoDesign_powered
+theme: DemoDesign
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

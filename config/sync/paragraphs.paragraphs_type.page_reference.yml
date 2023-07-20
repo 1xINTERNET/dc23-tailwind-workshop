@@ -1,0 +1,20 @@
+uuid: eea40c2a-7185-409e-8add-7f2bc7e930a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - triana
+id: page_reference
+label: 'Page reference'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  paragraph_teaser_layout:
+    enabled: true
+    default_teaser_layout: block_of_three
+    options:
+      one_column: 'One column grid'
+      two_columns: 'Two column grid'
+      block_of_three: 'Three column grid'
+      four_columns: 'Four column grid'

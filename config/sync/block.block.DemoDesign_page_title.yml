@@ -1,0 +1,20 @@
+uuid: f6f9c8c8-aad0-4791-8adb-0ed98cd78ed7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - DemoDesign
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: DemoDesign_page_title
+theme: DemoDesign
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

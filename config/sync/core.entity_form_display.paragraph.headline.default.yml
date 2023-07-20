@@ -1,0 +1,34 @@
+uuid: bd62877c-26c1-4985-99f6-58e4b576db9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.headline.field_preheadline
+    - field.field.paragraph.headline.field_text
+    - paragraphs.paragraphs_type.headline
+  module:
+    - text
+id: paragraph.headline.default
+targetEntityType: paragraph
+bundle: headline
+mode: default
+content:
+  field_preheadline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

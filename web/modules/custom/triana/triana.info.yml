@@ -1,0 +1,6 @@
+name: Triana
+type: module
+description: 'Site specific functionality.'
+core_version_requirement: ^9.4
+dependencies:
+  - paragraphs:paragraphs

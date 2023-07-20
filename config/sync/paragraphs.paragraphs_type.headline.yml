@@ -1,0 +1,27 @@
+uuid: 1e07ec39-377b-4680-951c-685e816ae6b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - triana
+id: headline
+label: Headline
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  headline_type:
+    enabled: true
+    default_headline_type: h2
+    default_alignment: left
+    options:
+      h1: H1
+      h2: H2
+      h3: H3
+      h4: H4
+      h5: H5
+      h6: H6
+    alignment_options:
+      left: Left
+      center: Center
+      right: Right

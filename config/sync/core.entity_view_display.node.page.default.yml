@@ -1,0 +1,32 @@
+uuid: 65643910-59ae-4a57-8276-bdd861b410db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_content_paragraphs
+    - field.field.node.page.field_header_paragraph
+    - field.field.node.page.field_preview_image
+    - field.field.node.page.field_preview_text
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_content_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_header_paragraph: true
+  field_preview_image: true
+  field_preview_text: true
+  links: true

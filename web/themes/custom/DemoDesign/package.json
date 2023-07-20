@@ -1,0 +1,44 @@
+{
+  "name": "DesignDemo",
+  "version": "1.0.0",
+  "description": "DesignDemo theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "install:design-system": "cd design-system && npm install && cd -",
+    "install:all": "npm install && npm run install:design-system",
+    "build": "NODE_ENV=production webpack --mode production",
+    "build:design-system": "cd design-system && npm run build && cd -",
+    "build:storybook": "cd design-system && npm run build:storybook && cd -",
+    "build:all": "npm run build:design-system && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "glob": "^7.1.6",
+    "postcss": "^8.1.9",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^13.0.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-url": "^10.1.0",
+    "slim-select": "^1.27.0",
+    "tailwindcss": "^1.9.6",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "devDependencies": {
+    "drupal-libraries-webpack-plugin": "^1.1.4",
+    "webpack-cmd-shell-plugin": "^0.0.8",
+    "webpack-fix-style-only-entries": "^0.6.1"
+  }
+}
