@@ -5,13 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#23529F',
+        brand: {
+          DEFAULT: '#23529F',
+          dark: '#213970',
+          text: '#09547A'
+        },
         secondary: '#E22B4B',
         white: '#FFFFFF',
-        background: '#f3f3f0',
-        card: '#E4EAEB',
-        'brand-dark': '#213970',
-        'brand-text': '#09547A'
+        neutral: '#f3f3f0',
+        card: '#E4EAEB'
       }
     },
     fontFamily: {

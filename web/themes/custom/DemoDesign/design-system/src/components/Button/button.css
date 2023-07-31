@@ -5,12 +5,12 @@
 
 /* Base Button */
 button {
-  @apply flex items-center bg-secondary border-transparent text-white font-bold text-sm justify-center px-16 py-3 rounded-[40px] uppercase transition-all duration-200 ease-in-out hover:bg-secondary/50;
+  @apply flex items-center bg-brand border-transparent text-white font-bold text-sm justify-center px-12 py-3 rounded-[40px] uppercase transition-all duration-200 ease-in-out hover:bg-brand/50;
 }
 
 /* Outline */
 :host([outline]) button {
-  @apply bg-white text-secondary border border-secondary;
+  @apply bg-white text-brand border border-brand hover:bg-brand/10;
 }
 
 :host([secondary]) button {
