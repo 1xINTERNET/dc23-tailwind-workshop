@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#23529F',
+          DEFAULT: '#09547a',
           dark: '#213970',
           text: '#09547A'
         },
@@ -18,6 +18,9 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', ...defaultTheme.fontFamily.sans]
+    },
+    maxWidth: {
+      xs: '12rem'
     }
   },
   plugins: []

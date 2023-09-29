@@ -1,22 +1,19 @@
-import { html, nothing } from 'lit-html';
-import { ifDefined } from 'lit-html/directives/if-defined';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
+import { html, nothing } from 'lit-html'
+import { ifDefined } from 'lit-html/directives/if-defined'
+import { unsafeHTML } from 'lit-html/directives/unsafe-html'
 
-import { sanitizeHTML } from '../../utils';
+import { sanitizeHTML } from '../../utils'
 
-import './DcCard';
+import './DcCard'
 
-import demoCardImage from '../../assets/images/demo/demo.png';
+import demoCardImage from '../../assets/images/demo/demo.png'
 
 const demoImage = `
 <div slot="media">
-  <article class="contextual-region media media--type-image media--view-mode-default">
-    <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
-      <div class="field__item">
-        <img loading="lazy" style="border-radius: 9999px" src=${demoCardImage} alt="Beach" typeof="foaf:Image">
-      </div>
-    </div>
-  </article>
+  <img loading="lazy" data-sizes="auto"
+  style="border-radius: 9999px; width: -webkit-fill-available;"
+  src="${demoCardImage}" alt="Cat"
+  >
 </div>`
 
 const Template = ({
