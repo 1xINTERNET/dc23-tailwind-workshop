@@ -57,8 +57,8 @@
     {# Header #}
     <header class="container pt-4 px-3 mx-auto" role="banner">
       <div class="flex flex-col sm:flex-row justify-between items-center section layout-container clearfix">
-        <a href="#" rel="home" slot="branding">
-          <img src=" ../themes/custom/DemoDesign/assets/Logo-talks.png" alt="{{ 'Home'|t }}"/>
+        <a href="{{ path('<front>') }}" rel="home" slot="branding">
+          <img class="mb-4 max-w-xs" src="../themes/custom/DemoDesign/assets/main-logo.svg" alt="{{ 'Home'|t }}"/>
         </a>
         <div class="flex items-center gap-5 order-last">
           <a href="#" class="text-black" rel="home" slot="branding">
@@ -87,7 +87,6 @@
             {{ page.content }}
           </section>
         </main>
-
       </div>
     </div>
 
@@ -95,7 +94,7 @@
     <footer class="container px-3 mx-auto">
       <div class="flex flex-col sm:flex-row justify-between layout-container">
         <a href="{{ path('<front>') }}" rel="home" slot="branding">
-          <img class="py-10 max-w-xs" src=" ../themes/custom/DemoDesign/assets/drupalcon-logo.png"/>
+          <img class="max-w-xs mb-4" src="../themes/custom/DemoDesign/assets/DrupalCon-Lille-logo-header.png"/>
         </a>
         <a href="https://www.1xinternet.de/en" rel="home" slot="branding">
           <img class="py-10 max-w-xs" src=" ../themes/custom/DemoDesign/assets/logo.png" alt="{{ 'Home'|t }}"/>

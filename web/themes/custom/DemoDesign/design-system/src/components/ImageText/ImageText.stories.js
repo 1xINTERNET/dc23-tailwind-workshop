@@ -8,7 +8,7 @@ import './DcImageText'
 
 import demoBildTextImage from '../../assets/images/demo/demo.png'
 
-const demoImage = `<article slot="media"><img src=${demoBildTextImage}></article>`
+const demoImage = `<img slot="media" src=${demoBildTextImage}></img>`
 
 const Template = ({ title, slotMedia, slotDefault }) => html`
   <dc-image-text title=${ifDefined(title)}>
