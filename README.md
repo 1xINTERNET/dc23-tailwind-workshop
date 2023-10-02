@@ -12,17 +12,12 @@
 ### Theme, design system and app
 
 1. In `../web/themes/custom/DemoDesign/design-system` run `nvm use`
-2. In `../web/themes/custom/DemoDesign/design-system` run `npm i`
-3. In `../web/themes/custom/DemoDesign/react-app` run `npm i`
-4. In `../web/themes/custom/DemoDesign/` `npm install`
+2. In `../web/themes/custom/DemoDesign/design-system` run `npm i && npm run build`
+3. In `../web/themes/custom/DemoDesign/react-app` run `npm i && npm run build`
+4. In `../web/themes/custom/DemoDesign/` `npm i && npm run build`
+5. Wherever run `ddev drush cr`
 
 ## Development
 
-1. Check the storybook, in `../web/themes/custom/DemoDesign/design-system` run `npm start`
-2. Check the app, in `../web/themes/custom/DemoDesign/react-app` run `npm start`
-
-## Build
-
-1. In `../web/themes/custom/DemoDesign/design-system` run `npm run build`
-2. In `../web/themes/custom/DemoDesign/react-app` run `npm run build`
-3. In `../web/themes/custom/DemoDesign/` run `npm run build`
+1. Check the design system's storybook, in `../web/themes/custom/DemoDesign/design-system` run `npm start`
+2. Check the react app, in `../web/themes/custom/DemoDesign/react-app` run `npm start`
