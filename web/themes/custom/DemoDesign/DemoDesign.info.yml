@@ -30,7 +30,9 @@ libraries:
   - DemoDesign/dc-headline
   - DemoDesign/dc-button
   - DemoDesign/dc-card
+  - DemoDesign/dc-task
   - DemoDesign/runtime
   - DemoDesign/vendor
   - DemoDesign/tailwind
   - DemoDesign/polyfills
+  - DemoDesign/todo-app

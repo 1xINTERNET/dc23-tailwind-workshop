@@ -7,7 +7,9 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
 const WebpackCmdShellPlugin = require('webpack-cmd-shell-plugin')
 const { version: designSystemVersion } = require('./design-system/package.json')
 const designSystemPath = './design-system'
+const reactAppPath = './react-app'
 const designSystemPathDist = `${designSystemPath}/dist`
+const reactAppPathDist = `${reactAppPath}/dist`
 const designSystemNamespace = 'Demo'
 const themeName = 'DemoDesign'
 
@@ -128,6 +130,9 @@ module.exports = {
       patterns: [
         {
           from: `${designSystemPathDist}/assets`, to: 'assets'
+        },
+        {
+          from: `${reactAppPathDist}`, to: 'todo-app'
         }
       ]
     }),

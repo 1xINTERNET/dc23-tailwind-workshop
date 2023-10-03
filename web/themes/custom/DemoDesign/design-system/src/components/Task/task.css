@@ -1,0 +1,53 @@
+:host {
+  @apply block h-6;
+}
+
+:host label {
+  @apply inline-flex items-center cursor-pointer gap-2;
+}
+
+:host label:hover {
+  @apply text-gray-700 line-through;
+}
+
+:host label input[type="checkbox"] {
+  @apply hidden;
+}
+
+:host label .checkmark {
+  @apply inline-flex items-center justify-center flex-shrink-0 w-5 h-5 border border-gray-400 rounded-md;
+}
+
+:host([completed]) label .checkmark {
+  @apply bg-brand border-transparent relative;
+}
+
+:host([completed]) label .checkmark:after {
+  @apply w-3 h-3 text-white text-base flex items-center;
+  content: "✓";
+}
+
+:host([completed]) label {
+  @apply line-through opacity-75;
+}
+
+:host .checkmark:after {
+  @apply !no-underline;
+}
+
+:host label .checkmark:after {
+  @apply hidden;
+  content: "";
+}
+
+:host label .checkmark svg {
+  @apply w-3 h-3 text-white;
+}
+
+:host label:hover input[type="checkbox"] ~ .checkmark {
+  @apply border-gray-500;
+}
+
+:host label input[type="checkbox"]:focus ~ .checkmark {
+  @apply ring-2 ring-offset-2 ring-offset-blue-500 ring-white;
+}
