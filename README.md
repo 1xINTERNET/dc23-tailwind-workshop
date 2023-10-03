@@ -5,7 +5,7 @@
 ### Drupal
 
 1. To start the project run `ddev start && ddev composer install`
-2. To import the demo database run `ddev import-db --src=./resources/demo-database.sql.gz && ddev drush cr`
+2. To import the demo database run `ddev import-db --src=./resources/db-drupalcon-lille.sql && ddev drush cr`
 3. To launch the project run `ddev launch`
 4. To login into the site run `ddev drush uli`
 
@@ -14,7 +14,7 @@
 1. In `../web/themes/custom/DemoDesign/design-system` run `nvm use`
 2. In `../web/themes/custom/DemoDesign/design-system` run `npm i && npm run build`
 3. In `../web/themes/custom/DemoDesign/react-app` run `npm i && npm run build`
-4. In `../web/themes/custom/DemoDesign/` `npm i && npm run build`
+4. In `../web/themes/custom/DemoDesign/` run `npm i && npm run build`
 5. Wherever run `ddev drush cr`
 
 ## Development
