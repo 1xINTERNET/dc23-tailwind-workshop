@@ -27,7 +27,7 @@
     </div>
 
     {% if content.field_link|field_value is not empty %}
-      <dc-button rounded onclick="window.open('{{ content.field_link.0['#url'] }}');">
+      <dc-button secondary rounded onclick="window.open('{{ content.field_link.0['#url'] }}');">
         {{ content.field_link.0['#title'] }}
       </dc-button>
     {% endif %}
