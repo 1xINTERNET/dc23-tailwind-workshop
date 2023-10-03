@@ -23,7 +23,6 @@ export class Task extends Component {
 
   handleClick (e) {
     this.dispatchEvent(new CustomEvent('task-click', { detail: !this.completed, bubbles: true }))
-    console.log('EVENT: task-click')
     e.preventDefault()
   }
 

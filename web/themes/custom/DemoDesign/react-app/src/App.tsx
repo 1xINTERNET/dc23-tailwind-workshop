@@ -67,7 +67,6 @@ function App() {
 
 
   const onTaskClick = (taskId: number, newCompleted: boolean) => {
-    console.log("onTaskClick", taskId)
     updateTasks(taskId, newCompleted);
   };
 
