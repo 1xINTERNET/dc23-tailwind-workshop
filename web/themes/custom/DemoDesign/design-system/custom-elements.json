@@ -140,6 +140,37 @@
           "type": "string"
         }
       ]
+    },
+    {
+      "name": "dc-task",
+      "path": "./src/components/Task/DcTask.js",
+      "attributes": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "completed",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string"
+        },
+        {
+          "name": "completed",
+          "attribute": "completed",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "task-click"
+        }
+      ]
     }
   ]
 }

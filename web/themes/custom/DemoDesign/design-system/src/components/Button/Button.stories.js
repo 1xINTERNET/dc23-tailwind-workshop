@@ -59,7 +59,7 @@ export const Disabled = DisabledTemplate.bind({})
 Disabled.args = {}
 
 export default {
-  title: 'Atoms/Buttons/Button',
+  title: 'Atoms/Button',
   component: 'dc-button',
   argTypes: {
     color: {
