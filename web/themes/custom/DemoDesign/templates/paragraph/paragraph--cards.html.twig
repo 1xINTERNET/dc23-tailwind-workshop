@@ -1,14 +1,14 @@
 <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 py-5 mb-10 container px-3 mx-auto">
-  <dc-card variant="compact" highlight label="20-23">
-    September
+  <dc-card variant="compact" highlight label="{{ content.field_title.0 }}">
+    {{ content.field_text.0 }}
   </dc-card>
-  <dc-card variant="compact" label="60+">
-    Speaker
+  <dc-card variant="compact" label="{{ content.field_title.1 }}">
+    {{ content.field_text.1 }}
   </dc-card>
-  <dc-card variant="compact" label="800+">
-    Summits & Training
+  <dc-card variant="compact" label="{{ content.field_title.2 }}">
+    {{ content.field_text.2 }}
   </dc-card>
-  <dc-card variant="compact" label="3">
-    Workshops
+  <dc-card variant="compact" label="{{ content.field_title.3 }}">
+    {{ content.field_text.3 }}
   </dc-card>
 </div>

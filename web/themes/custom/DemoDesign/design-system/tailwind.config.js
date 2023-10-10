@@ -24,6 +24,10 @@ module.exports = {
     },
     minHeight: {
       md: '18rem'
+    },
+    backgroundImage: {
+      'colored-line': "url('/themes/custom/DemoDesign/assets/colored-line.jpg')",
+      'todo-paragraph': "url('/themes/custom/DemoDesign/assets/triangle-background.png')"
     }
   },
   plugins: []

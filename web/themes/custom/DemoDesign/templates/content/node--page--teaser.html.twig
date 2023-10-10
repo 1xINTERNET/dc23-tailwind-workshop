@@ -1,6 +1,6 @@
 {%
   set card_attributes = create_attribute({
-    'label': label|render,
+    'label': label.0['#context'],
     'has-action': url is not null ? true : false,
     'has-more': true,
     'class': 'bg-brand text-white'

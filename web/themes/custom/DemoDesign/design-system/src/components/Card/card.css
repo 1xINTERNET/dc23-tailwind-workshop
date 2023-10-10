@@ -7,7 +7,7 @@
 }
 
 .card__content {
-  @apply flex flex-col h-16;
+  @apply flex flex-col;
 }
 
 .card__action {
@@ -15,11 +15,11 @@
 }
 
 .card__media {
-  @apply flex justify-center my-auto;
+  @apply flex justify-center mt-auto;
 }
 
 .card__title {
-  @apply w-10/12 mt-2 h-16 flex flex-col justify-end;
+  @apply w-10/12 mt-2 flex flex-col justify-end;
 }
 
 .card__wrapper {
@@ -42,7 +42,7 @@
 }
 
 .card ::slotted([slot="media"]) {
-  @apply rounded-full object-cover aspect-square bg-brand p-2;
+  @apply rounded-full object-cover aspect-square bg-brand p-2 ;
 }
 
 /* compact variant */
@@ -60,5 +60,5 @@
 }
 
 :host([variant="compact"]) .card__title {
-  @apply mb-4 text-6xl w-full h-auto;
+  @apply mb-4 text-2xl w-full h-auto;
 }
