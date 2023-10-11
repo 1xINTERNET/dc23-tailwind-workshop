@@ -8,51 +8,8 @@ type Task = {
   completed: boolean;
 };
 
-const TASKS: Task[] = [
-  {
-    id: 1,
-    title: "Register",
-    completed: false,
-  },
-  {
-    id: 2,
-    title: "Book a flight",
-    completed: false,
-  },
-  {
-    id: 3,
-    title: "Book a hotel",
-    completed: false,
-  },
-  {
-    id: 4,
-    title: "Check the schedule",
-    completed: false,
-  },
-  {
-    id: 5,
-    title: "Note down your favorite sessions",
-    completed: false,
-  },
-  {
-    id: 6,
-    title: "Meet in Lille",
-    completed: false,
-  },
-  {
-    id: 7,
-    title: "Attend this talk",
-    completed: false,
-  },
-  {
-    id: 8,
-    title: "Ask questions!",
-    completed: false,
-  },
-];
-
-function App() {
-  const [tasks, setTasks] = useState(TASKS);
+function App(props: { tasks: Task[] }) {
+  const [tasks, setTasks] = useState(props.tasks);
 
   const updateTasks = (taskId: number, completed: boolean) => {
     setTasks((tasks) =>
@@ -63,8 +20,7 @@ function App() {
         return task;
       })
     );
-  }
-
+  };
 
   const onTaskClick = (taskId: number, newCompleted: boolean) => {
     updateTasks(taskId, newCompleted);
@@ -85,21 +41,21 @@ function App() {
   }, [tasks]);
 
   return (
-    <>
-      <div className="flex-col my-3">
-        <span className="text-xl">Todo</span>
+    <div className="flex gap-20">
+      <div className="flex flex-col my-3 gap-1">
+        <span className="text-xl text-brand font-bold">To-Do</span>
         {todoTasks.map((task) => (
-          <Task key={"todo"+task.id} {...task} onClick={onTaskClick} />
+          <Task key={"todo" + task.id} {...task} onClick={onTaskClick} />
         ))}
       </div>
-      <hr className="my-3 border-gray-300" />
-      <div className="flex-col my-3">
-        <span className="text-xl">Done</span>
+      <div className="my-3 border-gray-400/70 border-r" />
+      <div className="flex flex-col my-3 gap-1">
+        <span className="text-xl text-brand font-bold">Done</span>
         {doneTasks.map((task) => (
-          <Task key={"done"+task.id} {...task} onClick={onTaskClick} />
+          <Task key={"done" + task.id} {...task} onClick={onTaskClick} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
