@@ -1,29 +1,5 @@
 @tailwind base;
 
-h1 {
-  @apply font-medium leading-tight text-5xl mt-0 mb-2;
-}
-
-h2 {
-  @apply font-medium leading-tight text-4xl mt-0 mb-2;
-}
-
-h3 {
-  @apply font-medium leading-tight text-3xl mt-0 mb-2;
-}
-
-h4 {
-  @apply font-medium leading-tight text-2xl mt-0 mb-2;
-}
-
-h5 {
-  @apply font-medium leading-tight text-xl mt-0 mb-2;
-}
-
-h6 {
-  @apply font-medium leading-tight text-base mt-0 mb-2;
-}
-
 .field--type-image img,
 .field--name-user-picture img {
   margin: 0 !important;

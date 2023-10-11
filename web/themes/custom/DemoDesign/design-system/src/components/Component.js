@@ -1,12 +1,13 @@
-import { LitElement, html, css, unsafeCSS } from 'lit-element'
-
-import tailwindBase from '../tailwind.base.css'
+import { LitElement, html } from 'lit-element'
 
 export class Component extends LitElement {
+  static get baseStyles () {
+    const baseUrl = window.baseUrlStyles ?? 'tailwind.css'
+    return html`<link rel="stylesheet" href="${baseUrl}" />`
+  }
+
   static get styles () {
-    return [
-      css`${unsafeCSS(tailwindBase)}`
-    ]
+    return []
   }
 
   render () {

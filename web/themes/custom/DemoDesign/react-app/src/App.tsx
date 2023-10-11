@@ -8,7 +8,7 @@ type Task = {
   completed: boolean;
 };
 
-function App(props:{tasks:Task[]}) {
+function App(props: { tasks: Task[] }) {
   const [tasks, setTasks] = useState(props.tasks);
 
   const updateTasks = (taskId: number, completed: boolean) => {
@@ -20,8 +20,7 @@ function App(props:{tasks:Task[]}) {
         return task;
       })
     );
-  }
-
+  };
 
   const onTaskClick = (taskId: number, newCompleted: boolean) => {
     updateTasks(taskId, newCompleted);
@@ -46,14 +45,14 @@ function App(props:{tasks:Task[]}) {
       <div className="flex flex-col my-3 gap-1">
         <span className="text-xl text-brand font-bold">To-Do</span>
         {todoTasks.map((task) => (
-          <Task key={"todo"+task.id} {...task} onClick={onTaskClick} />
+          <Task key={"todo" + task.id} {...task} onClick={onTaskClick} />
         ))}
       </div>
       <div className="my-3 border-gray-400/70 border-r" />
       <div className="flex flex-col my-3 gap-1">
         <span className="text-xl text-brand font-bold">Done</span>
         {doneTasks.map((task) => (
-          <Task key={"done"+task.id} {...task} onClick={onTaskClick} />
+          <Task key={"done" + task.id} {...task} onClick={onTaskClick} />
         ))}
       </div>
     </div>
