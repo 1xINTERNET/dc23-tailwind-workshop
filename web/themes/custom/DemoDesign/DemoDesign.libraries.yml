@@ -44,10 +44,6 @@ vendor:
   js:
     dist/design-system/vendor.js:
       minified: true
-tailwind:
-  css:
-    base:
-      dist/tailwind.css: {}
 polyfills:
   version: 2.5.0
   header: true
@@ -62,4 +58,3 @@ todo-app:
       minified: true
   dependencies:
     - DemoDesign/dc-card
-    - DemoDesign/tailwind

@@ -1,6 +1,9 @@
 import { configure, setCustomElements } from '@storybook/web-components'
 import customElements from '../custom-elements.json'
 
+import '../src/tailwind.css'
+import '../src/tailwind.base.css'
+
 setCustomElements(customElements)
 
 export const parameters = {
@@ -20,7 +23,6 @@ export const parameters = {
       wrapLines: false
     }
   },
-
   options: {
     storySort: {
       order: ['Introduction', 'Icons', 'Atoms', 'Molecules', 'Organisms', 'Layouts', 'Mockups']

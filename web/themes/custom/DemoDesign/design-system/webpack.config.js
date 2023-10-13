@@ -21,7 +21,8 @@ const components = componentList.reduce((all, name) => {
 }, {})
 
 const styles = {
-  tailwind: './src/tailwind.css'
+  tailwind: './src/tailwind.css',
+  tailwindBase: './src/tailwind.base.css'
 }
 
 const polyfills = {
@@ -90,6 +91,25 @@ module.exports = {
           'raw-loader',
           'postcss-loader'
         ]
+      },
+      {
+        test: /tailwind.css$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              esModule: false,
+              emit: true
+            }
+          },
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /tailwind.css$/,
+        use: ['raw-loader', 'postcss-loader']
       },
       {
         test: /\.(jpg|png)$/,

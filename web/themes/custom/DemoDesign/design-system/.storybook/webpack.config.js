@@ -20,7 +20,7 @@ module.exports = async ({ config, mode }) => {
   })
 
   config.module.rules.push({
-    test: /tailwind\.css$/,
+    test: /tailwind.css$/,
     use: [
       {
         loader: 'file-loader',
@@ -37,11 +37,8 @@ module.exports = async ({ config, mode }) => {
 
   config.module.rules.push({
     test: /\.css$/,
-    exclude: /tailwind\.css$/,
-    use: [
-      'raw-loader',
-      'postcss-loader'
-    ],
+    exclude: /tailwind.css$/,
+    use: ['raw-loader', 'postcss-loader'],
     include: path.resolve(__dirname, '../')
   })
 
