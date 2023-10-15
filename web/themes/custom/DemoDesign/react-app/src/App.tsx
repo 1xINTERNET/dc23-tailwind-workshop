@@ -41,15 +41,15 @@ function App(props: { tasks: Task[] }) {
   }, [tasks]);
 
   return (
-    <div className="flex gap-20">
-      <div className="flex flex-col my-3 gap-1">
+    <div className="flex flex-col md:flex-row gap-20 w-full justify-center">
+      <div className="flex flex-col my-3 gap-1 w-1/3">
         <span className="text-xl text-brand font-bold">To-Do</span>
         {todoTasks.map((task) => (
           <Task key={"todo" + task.id} {...task} onClick={onTaskClick} />
         ))}
       </div>
       <div className="my-3 border-gray-400/70 border-r" />
-      <div className="flex flex-col my-3 gap-1">
+      <div className="flex flex-col my-3 gap-1 w-1/3">
         <span className="text-xl text-brand font-bold">Done</span>
         {doneTasks.map((task) => (
           <Task key={"done" + task.id} {...task} onClick={onTaskClick} />

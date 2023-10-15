@@ -44,6 +44,12 @@ vendor:
   js:
     dist/design-system/vendor.js:
       minified: true
+tailwind:
+  css:
+    theme:
+      dist/tailwind.css: 
+        minified: true
+        preprocess: false
 polyfills:
   version: 2.5.0
   header: true
