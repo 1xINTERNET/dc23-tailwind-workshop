@@ -86,13 +86,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [
-          'raw-loader',
-          'postcss-loader'
-        ]
-      },
-      {
         test: /tailwind.css$/,
         use: [
           {
